@@ -2,7 +2,8 @@ from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
 import scraping
 
-app = Flask(__name__, template_folder='.') # '.' means the current directory
+# app = Flask(__name__, template_folder='.') # '.' means the current directory
+app = Flask(__name__)
 
 # Use flask_pymongo to set up mongo connection
 app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
@@ -12,27 +13,6 @@ mongo = PyMongo(app)
 def index():
    mars = mongo.db.mars.find_one()
    return render_template("index.html", mars=mars)
-   #return(
-   """    '''
-    <h1>Welcome to the Climate Analysis API!</h1>
-    </br>
-    <h4>Available Routes:</h4>
-    </br>
-    <div>
-        <li>
-            <a href="http://127.0.0.1:5000/api/v1.0/precipitation">/api/v1.0/precipitation</a>
-        </li>
-        <li>
-             <a href="http://127.0.0.1:5000/api/v1.0/stations">/api/v1.0/stations</a>
-        </li>
-        <li>
-             <a href="http://127.0.0.1:5000/api/v1.0/tobs">/api/v1.0/tobs</a>
-        </li>
-        <li>
-             <a href="http://127.0.0.1:5000/api/v1.0/temp/start/end">/api/v1.0/temp/start/end</a>
-        </li>
-    </div>
-    ''') """
 
 @app.route("/scrape")
 def scrape():
