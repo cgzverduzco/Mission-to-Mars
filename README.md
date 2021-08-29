@@ -30,10 +30,10 @@ A web page responsible:
 ![alt text](./resources/pagedesk.png)
 
 ### Phone view
-![alt text](./resources/pageiphone.png)
+![alt text](./resources/pageIphone.png)
 
 ### Tablet view
-![alt text](./resources/pageipad2.png)
+![alt text](./resources/pageIpad2.png)
 
 
 # Summary
