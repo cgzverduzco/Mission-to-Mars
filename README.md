@@ -1,5 +1,5 @@
 # Mission-to-Mars Challenge
-###### Challenge Module 10
+
 ____________________________________________________
 
 # Overview
